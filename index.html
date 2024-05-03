@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Calendar</title>
+  </head>
+  <body>
+    <h1>My Calendar</h1>
+       <div class="calendar">
+      <div class="search-dates-container">
+      <span class="calendar-img" aria-hidden="true"></span>
+      <button id="check-in-button" type="button" class="dates-buttons">
+      <span class="check-in-span">Check-in date</span>
+      </button>
+      <span class="dash-search-dates"> — </span>
+      <button id="check-out-button" type="button" class="dates-buttons">
+      <span class="check-out-span">Check-out date</span>
+      </button>
+ 
+      </div>  
+      <!-- END search-dates-container -->
+         <!--  <div class="modal-content hide">
+        <p id="alert-message"></p>
+      </div>-->
+      <div class="search-div">
+        <button type="button" class="search-button">
+          <span class="search-span">Search</span>
+          </button>
+      </div>
+
+ 
+      <!-- START MY DATEPICKER -->
+      <div class="date-picker-wrapper hide">
+  <!-- <div id="sticky-id" class="sticky-div">
+          <button aria-label="Next month" type="button" class="close-button">
+            <span class="close-span">
+            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg" class="close-calendar-icon">
+              <line x1="1" y1="1" x2="9" y2="9" stroke="black" stroke-width="1" />
+              <line x1="9" y1="1" x2="1" y2="9" stroke="black" stroke-width="1" />
+            </svg>
+            </span>
+            </button>
+        <h3 aria-live="polite" class="dates-select-mobile">Select your dates</h3> 
+        <ul class="day-name-list-mobile">
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Mon</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Tue</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Wed</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Thu</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Fri</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Sat</span></li>
+          <li class="day-name-cotainer-mobile"><span class="day-name-mobile">Sun</span></li>
+        </ul>
+        </div> 
+      
+      <button aria-label="Previous month"  type="button" class="previous-button">
+      <span class="move-month previous"><svg class="arrow" viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+      </svg></span>
+      </button>
+      <button aria-label="Next month"  type="button" class="next-button">
+      <span class="move-month next">
+        <svg class="arrow next-arrow" viewBox="0 0 24 24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+          </svg>
+      </span>
+      </button>
+      
+      
+      
+      
+      <div class="calendar-container">
+      <div class="months-container">
+      <h3 aria-live="polite" class="month-name-year">Month Name Check</h3>
+      <table class="table-calendar" role="grid">
+       <caption class="month-name-caption">Month Name Year</caption> 
+      <thead aria-hidden="true" class="day-name-list">
+        <tr>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Mo</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Tu</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">We</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Th</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Fr</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Sa</div></th>
+          <th scope="col" class="day-name-cotainer"><div class="day-name">Su</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-01" aria-checked="false" role="checkbox" aria-label="1 April 2024"><span>1</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-02" aria-checked="false" role="checkbox" aria-label="2 April 2024"><span>2</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-03" aria-checked="false" role="checkbox" aria-label="3 April 2024"><span>3</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-04" aria-checked="false" role="checkbox" aria-label="4 April 2024"><span>4</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-05" aria-checked="false" role="checkbox" aria-label="5 April 2024"><span>5</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-06" aria-checked="false" role="checkbox" aria-label="6 April 2024"><span>6</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day past-day" data-date="2024-04-07" aria-checked="false" role="checkbox" aria-label="7 April 2024"><span>7</span></span></td>
+        </tr>
+        <tr>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-08" aria-checked="false" role="checkbox" aria-label="8 April 2024"><span>8</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-09" aria-checked="false" role="checkbox" aria-label="9 April 2024"><span>9</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-dayy" data-date="2024-04-10" aria-checked="false" role="checkbox" aria-label="10 April 2024"><span>10</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-11" aria-checked="false" role="checkbox" aria-label="11 April 2024"><span>11</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-12" aria-checked="false" role="checkbox" aria-label="12 April 2024"><span>12</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-13" aria-checked="false" role="checkbox" aria-label="13 April 2024"><span>13</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-14" aria-checked="false" role="checkbox" aria-label="14 April 2024"><span>14</span></span></td>
+          </tr>
+            <tr>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-15" aria-checked="false" role="checkbox" aria-label="15 April 2024"><span>15</span></span></td>
+          <td role="gridcell" class="calendar-day past-day"><span tabindex="-1" class="span-day" data-date="2024-04-16" aria-checked="false" role="checkbox" aria-label="16 April 2024"><span>16</span></span></td>
+          <td role="gridcell" class="calendar-day current-day"><span tabindex="-1" class="span-day" data-date="2024-04-17" aria-checked="false" role="checkbox" aria-label="17 April 2024"><span>17</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-18" aria-checked="false" role="checkbox" aria-label="18 April 2024"><span>18</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-19" aria-checked="false" role="checkbox" aria-label="19 April 2024"><span>19</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-20" aria-checked="false" role="checkbox" aria-label="20 April 2024"><span>20</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-21" aria-checked="false" role="checkbox" aria-label="21 April 2024"><span>21</span></span></td>
+            </tr>
+            <tr>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-22" aria-checked="false" role="checkbox" aria-label="22 April 2024"><span>22</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-23" aria-checked="false" role="checkbox" aria-label="23 April 2024"><span>23</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-24" aria-checked="false" role="checkbox" aria-label="24 April 2024"><span>24</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-25" aria-checked="false" role="checkbox" aria-label="25 April 2024"><span>25</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-26" aria-checked="false" role="checkbox" aria-label="26 April 2024"><span>26</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-27" aria-checked="false" role="checkbox" aria-label="27 April 2024"><span>27</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-28" aria-checked="false" role="checkbox" aria-label="28 April 2024"><span>28</span></span></td>
+          </tr>
+          <tr>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-29" aria-checked="false" role="checkbox" aria-label="29 April 2024"><span>29</span></span></td>
+          <td role="gridcell" class="calendar-day"><span tabindex="-1" class="span-day" data-date="2024-04-30" aria-checked="false" role="checkbox" aria-label="30 April 2024"><span>30</span></span></td>
+          <td class="calendar-day" aria-hidden="true"></td>
+          <td class="calendar-day" aria-hidden="true"></td>
+          <td class="calendar-day" aria-hidden="true"></td>
+          <td class="calendar-day" aria-hidden="true"></td>
+          <td class="calendar-day" aria-hidden="true"></td>
+          </tr>
+        </tbody>
+      </table>
+      </div> 
+    
+      <div class="calendar-footer">
+      <div class="sum-up"><span>check-in date -  check-out date (3 nights) </span> </div>
+      <div class="dates-done-div"> 
+        <button aria-label="dates-done-lbl"  type="button" class="dates-done">
+        <span class="done-btn-txt">Done!</span>
+        </button> 
+      </div>
+      </div>
+      </div>  END WRAPPER -->
+      
+      
+    </div> 
+      
+    </div>
+
+   
+  </body>
+</html>
